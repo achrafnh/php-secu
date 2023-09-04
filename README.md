@@ -1,6 +1,6 @@
 sql injection 
 un nom d'utilisateur malveillant tel que 
-admin' OR '1'='1  et un mot de passe ' OR '1'='1.
+admin' OR '1'='1  et un mot de passe ' OR '1'='1
 
 
 Si on veut supprimer une table on peut mettre :
