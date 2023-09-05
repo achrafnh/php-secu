@@ -65,8 +65,13 @@ admin123
 
 =============================Docker======================
 
+docker login 
 
 docker build . -t node-application
+
+
 docker tag node-application hrefnhaila/node-application:1.1.2
+
+
 docker push  hrefnhaila/node-application:1.1.2
 
