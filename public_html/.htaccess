@@ -1,1 +1,5 @@
 Options -Indexes
+AuthType Basic
+AuthName "MdP requis"
+AuthUserFile /var/www/html/.htpasswd
+Require valid-user
