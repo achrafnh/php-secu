@@ -1,7 +1,7 @@
 <?php
 $date = new DateTime('+1 day');
 
-setcookie('password', 'ilovesecrets', $date->getTimestamp());
+setcookie('password', 'admin1010', $date->getTimestamp());
 
 
 
@@ -10,8 +10,14 @@ setcookie('password', 'ilovesecrets', $date->getTimestamp());
  *
  */
 
+ $host = 'mysql';
+$user = 'root';
+$pass = 'root';
+$conn = new mysqli($host, $user, $pass);
 
-$con = new PDO('mysql:host=127.0.0.1;dbname=sql_injection', 'root', '');
+$con = new PDO('mysql:host=mysql;dbname=dbtest', 'root', 'root');
+
+
 
 
         $commentObject = $con->query("SELECT * FROM comments");
@@ -29,10 +35,11 @@ $con = new PDO('mysql:host=127.0.0.1;dbname=sql_injection', 'root', '');
 
             $name = $_POST['name'];
 
-           // $body =  htmlspecialchars($_POST['body'], ENT_QUOTES);
+           
 
             $body = $_POST['body'];
 
+           // $body =  htmlspecialchars($_POST['body'], ENT_QUOTES);
 
             $commentQuery = $con->prepare("INSERT INTO comments(name, body) VALUES(:name, :body)");
 
@@ -50,22 +57,7 @@ $con = new PDO('mysql:host=127.0.0.1;dbname=sql_injection', 'root', '');
 
 
 
-
-
-
-
-
-
-
-
-
-
 ?>
-
-
-
-
-
 
 
 
@@ -88,7 +80,7 @@ $con = new PDO('mysql:host=127.0.0.1;dbname=sql_injection', 'root', '');
 
 <div class="col-sm-6 col-sm-offset-3">
 
-    <h3 class="text-center">Make your comment</h3>
+    <h3 class="text-center">Nouveau commentaire</h3>
 
     <form action="" method="post" autocomplete="off">
 
