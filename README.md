@@ -60,3 +60,13 @@ git pull
 #htacces htpasswd
 admin 
 admin123
+
+
+
+=============================Docker======================
+
+
+docker build . -t node-application
+docker tag node-application hrefnhaila/node-application:1.1.2
+docker push  hrefnhaila/node-application:1.1.2
+
