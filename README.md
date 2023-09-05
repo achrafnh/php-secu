@@ -55,3 +55,8 @@ docker-compose down
 
 #ou cas ou le projet et deja cloner 
 git pull
+
+
+#htacces htpasswd
+admin 
+admin123
